@@ -16,7 +16,7 @@ def run():
 
     print("Bloqueando comunicação entre h1 e h2...")
     net.get('s1').cmd(
-        'ovs-ofctl add-flow s1 priority=100,ip,nw_src=10.0.0.1,nw_dst=10.0.0.2,actions=drop'
+        'sh ovs-ofctl add-flow s1 priority=100,ip,nw_src=10.0.0.1,nw_dst=10.0.0.2,actions=drop'
     )
 
     print("Teste após bloqueio:")
