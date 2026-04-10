@@ -20,7 +20,7 @@ def run():
     )
 
     print("Teste após bloqueio:")
-    h1.cmd('ping -c 3 10.0.0.2')
+    h1.cmd('pingall')
 
     print("Permitindo novamente...")
     net.get('s1').cmd('ovs-ofctl del-flows s1')
